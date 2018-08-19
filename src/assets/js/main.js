@@ -3,13 +3,12 @@ $(function() {
 	  infinite: true,
 	  slidesToShow: 1,
 	  autoplay: true,
-	  centerMode: true,
+	  centerMode: false,
 	  dots: false,
 	  appendArrows: $('.slider-products .slider__actions'),
 	  prevArrow: '.slider__prev',
 	  nextArrow: '.slider__next',
-	  variableWidth: true,
- 	  autoplaySpeed: 2000,
+ 	  autoplaySpeed: 5000,
 	  slidesToScroll: 1
 	});
 });

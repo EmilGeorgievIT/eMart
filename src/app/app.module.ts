@@ -14,11 +14,12 @@ import { ShoppingModule } from './shopping/shopping.module';
 import { AboutComponent } from './core/components/about/about.component';
 import { ContactsComponent } from './core/components/contacts/contacts.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    ContactsComponent,
+    ContactsComponent
   ],
   imports: [
     BrowserModule,

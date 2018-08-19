@@ -6,7 +6,7 @@ import { BsNavbarComponent } from './components/bs-navbar/bs-navbar.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SliderComponent } from './components/slider/slider.component';
-
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   imports: [
@@ -17,11 +17,13 @@ import { SliderComponent } from './components/slider/slider.component';
     BsNavbarComponent,
     HomeComponent,
     LoginComponent,
-    SliderComponent        
+    SliderComponent,
+    FooterComponent,
   ],
   exports: [
     BsNavbarComponent,
-    SliderComponent
+    SliderComponent,
+    FooterComponent,
   ]
 })
 export class CoreModule { }

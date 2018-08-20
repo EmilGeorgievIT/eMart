@@ -1,5 +1,6 @@
 import { ShoppingCart } from '../../../shared/models/shopping-cart';
 import { Observable } from 'rxjs/Observable';
+import * as $ from 'jquery';
 import { ShoppingCartService } from '../../../shared/services/shopping-cart.service';
 import { Product } from '../../../shared/models/product';
 import { ActivatedRoute } from '@angular/router';
@@ -42,7 +43,18 @@ export class ProductsComponent implements OnInit  {
         this.applyFilter();      
       });
   }
-
+  
+  searchFilter(query: string) { 
+    let filtered = (query) ?
+      this.products.filter(p => p.title.toLowerCase().includes(query.toLowerCase())) :
+      this.products;
+      
+      if(filtered.length){
+        $('.card').removeClass('d-none');
+      }else{
+        $('.card').addClass('d-none');
+      }
+  }
 
   private applyFilter() { 
     this.filteredProducts = (this.category) ? 

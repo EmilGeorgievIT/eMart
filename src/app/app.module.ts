@@ -11,14 +11,12 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { ProductsComponent } from './shopping/components/products/products.component';
 import { ShoppingModule } from './shopping/shopping.module';
-import { AboutComponent } from './core/components/about/about.component';
 import { ContactsComponent } from './core/components/contacts/contacts.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent,
     ContactsComponent
   ],
   imports: [
@@ -29,9 +27,8 @@ import { ContactsComponent } from './core/components/contacts/contacts.component
     CoreModule,
     AngularFireModule.initializeApp(environment.firebase),
     RouterModule.forRoot([
-      { path: '', component: ProductsComponent },
+      { path: 'products', component: ProductsComponent },
       { path: 'login', component: LoginComponent },
-      { path: 'about', component: AboutComponent },
       { path: 'contacts', component: ContactsComponent }
     ])    
   ],

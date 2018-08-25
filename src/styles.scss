@@ -163,5 +163,18 @@ h1, h2, h3 {
 \* ------------------------------------------------------------ */
 
 .search { position: relative; margin-bottom: 20px; }
+
 .search .field { padding: 10px 20px 10px 50px; }
 .search .search__controls .fa-search { position: absolute; top: 50%; transform: translateY(-50%); left: 15px; }
+
+/* ------------------------------------------------------------ *\
+  Wrapper
+\* ------------------------------------------------------------ */
+
+.wrapper { position: relative; min-width: 320px; overflow: hidden; }
+
+/* ------------------------------------------------------------ *\
+  Main
+\* ------------------------------------------------------------ */
+
+.main { margin-bottom: 67px;  }

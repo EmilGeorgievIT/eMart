@@ -48,7 +48,7 @@ export class ProductsComponent implements OnInit  {
     let filtered = (query) ?
       this.products.filter(p => p.title.toLowerCase().includes(query.toLowerCase())) :
       this.products;
-      
+
       if(filtered.length){
         $('.card').removeClass('d-none');
       }else{

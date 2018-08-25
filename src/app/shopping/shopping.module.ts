@@ -18,7 +18,7 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
   imports: [
     SharedModule,
     RouterModule.forChild([
-      { path: 'products', component: ProductsComponent },
+      { path: 'products', component: ProductsComponent,canActivate: [AuthGuard] },
       { path: 'shopping-cart', component: ShoppingCartComponent },
       { path: 'check-out', component: CheckOutComponent, canActivate: [AuthGuard] },
       { path: 'order-success/:id', component: OrderSuccessComponent, canActivate: [AuthGuard] },

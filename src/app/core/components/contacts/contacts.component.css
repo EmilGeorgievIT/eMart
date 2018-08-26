@@ -67,7 +67,7 @@ $breakpoint-tablet-portrait {
 	Form Contacts Large
 \* ------------------------------------------------------------ */
 
-.form-contacts--large { padding: 103px 0; max-width: 100%; color: #1b2633; }
+.form-contacts--large { padding: 30px 0; max-width: 930px; margin: 0 auto; color: #1b2633; }
 
 .form-contacts--large .field { border-color: #1b2633; }
 .form-contacts--large .form__col--1of2 { max-width: 457px; flex: 0 1 457px; }

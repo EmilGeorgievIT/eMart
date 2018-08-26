@@ -134,7 +134,15 @@ h1, h2, h3 {
   List Groups
 \* ------------------------------------------------------------ */
 
-.list-group-item.active { background-color: $primary-color; border-color: $primary-color; }
+.list-group-item.active { background-color: #000!important; border-color: #fff!important; }
+
+/* ------------------------------------------------------------ *\
+  List Buttons
+\* ------------------------------------------------------------ */
+
+.list-buttons { display: flex; align-items: center; justify-content: center; list-style: none; }
+.list-buttons li { display: inline-block; }
+.list-buttons li ~ li { margin-left: 5px; }
 
 /* ------------------------------------------------------------ *\
   Buttons
@@ -233,14 +241,14 @@ h1, h2, h3 {
   Button
 \* ------------------------------------------------------------ */
 
-.btn { position: relative; display: inline-block; vertical-align: middle; text-align: center; cursor: pointer; text-decoration: none; appearance: none; overflow: hidden; background-color: #1b2633; color: #fff; border-bottom: 1px solid #1b2633; }
+.btn { position: relative; display: inline-block; vertical-align: middle; text-align: center; cursor: pointer; text-decoration: none; appearance: none; overflow: hidden; background-color: #1b2633; color: #fff; border-bottom: 1px solid #1b2633; outline: 0;  border-radius: 0; }
 
 .btn:hover { background-color: transparent; color: #000; border: 0; }
 
 .btn:before { content: ''; position: absolute; bottom: 0; left: 0; width: 99.5%; height: 2px; border-bottom: 2px solid transparent; transform: translateX(100%); border-left: 2px solid transparent; }
 .btn:after { content: ''; position: absolute; top: 0; left: 0; width: 99.5%; height: 2px; border-top: 2px solid transparent; transform: translateX(-100%); border-right: 2px solid transparent; }
 
-.btn:hover:after { transition: 0.1s transform linear, 0.1s height linear 0.1s; transform: translateX(0); height: 100%; border-color: #1b2633;  }
+.btn:hover:after { transition: '0.1s' transform linear, 0.1s height linear 0.1s; transform: translateX(0); height: 100%; border-color: #1b2633;  }
 .btn:hover:before { transition: 0.1s transform linear 0.2s, 0.1s height linear 0.3s; transform: translateX(0); height: 100%; border-color: #1b2633; }
 /* Button Dark */
 

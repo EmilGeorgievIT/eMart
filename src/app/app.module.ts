@@ -12,12 +12,14 @@ import { SharedModule } from './shared/shared.module';
 import { ProductsComponent } from './shopping/components/products/products.component';
 import { ShoppingModule } from './shopping/shopping.module';
 import { ContactsComponent } from './core/components/contacts/contacts.component';
+import { AllproductsComponent } from './shopping/components/allproducts/allproducts.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactsComponent
+    ContactsComponent,
+    AllproductsComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { ContactsComponent } from './core/components/contacts/contacts.component
     CoreModule,
     AngularFireModule.initializeApp(environment.firebase),
     RouterModule.forRoot([
-      { path: 'products', component: ProductsComponent },
+      { path: '', component: ProductsComponent },
+      { path: 'allproduct', component: AllproductsComponent },
       { path: 'login', component: LoginComponent },
       { path: 'contacts', component: ContactsComponent }
     ])    

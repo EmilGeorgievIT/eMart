@@ -1,9 +1,32 @@
+<div class="container container-form">
+    <div class="card card-container">
 
-<button 
-  (click)="login()"
-  class="btn btn-danger">Login with Google</button>
-
-
-<button 
-  (click)="loginFacebook()"
-  class="btn btn-primary">Login with Facebook</button>
+    	<img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+        
+        <p id="profile-name" class="profile-name-card"></p>
+        
+        <form class="form-signin">
+            <span id="reauth-email" class="reauth-email"></span>
+            
+            <input type="email" id="inputEmail" class="form-control" placeholder="Потребителско име или поща" required autofocus>
+            
+            <input type="password" id="inputPassword" class="form-control" placeholder="Парола" required>
+            
+            <button class="btn" type="submit">Влез</button>
+        </form><!-- /form -->
+    </div><!-- /card-container -->
+	
+	<ul class="list-buttons">
+		<li>
+			<button 
+			  (click)="login()"
+			  class="btn btn-danger">Влез с Google</button>
+		</li>
+		
+		<li>
+			<button 
+			  (click)="loginFacebook()"
+			  class="btn btn-primary">Влез с Facebook</button>
+		</li>
+	</ul><!-- /.list-buttons -->
+</div><!-- /container -->

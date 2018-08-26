@@ -1,19 +1,21 @@
-<h1>Поръчки</h1>
-<table class="table">
-  <thead>
-    <tr>
-      <th>Купувач</th>
-      <th>Дата</th>
-      <th></th>
-    </tr>
-  </thead> 
-  <tbody>
-    <tr *ngFor="let order of orders$ | async">
-      <td>{{ order.shipping.name }}</td>
-      <td>{{ order.datePlaced | date}}</td>
-      <td>
-        <a href="#">Преглед</a>
-      </td>
-    </tr>
-  </tbody> 
-</table>
+<div class="container">
+  <h1>Поръчки</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Купувач</th>
+        <th>Дата</th>
+        <th></th>
+      </tr>
+    </thead> 
+    <tbody>
+      <tr *ngFor="let order of orders$ | async">
+        <td>{{ order.shipping.name }}</td>
+        <td>{{ order.datePlaced | date}}</td>
+        <td>
+          <a href="#">Преглед</a>
+        </td>
+      </tr>
+    </tbody> 
+  </table>
+</div><!-- /.container -->

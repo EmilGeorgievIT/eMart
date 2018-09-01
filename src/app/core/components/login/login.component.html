@@ -5,16 +5,20 @@
         
         <p id="profile-name" class="profile-name-card"></p>
         
-        <span class="error" *ngIf="error" [@fallIn]='state'>{{ error }}</span>
+        <p *ngIf="errorMessage.length > 0" class="text-danger">
+            {{errorMessage}}</p>
 
-        <form class="form-signin" #formData='ngForm' (ngSubmit)="onSubmit(formData)">
+        <p *ngIf="error.message.length > 0" class="text-danger">
+            {{error.message}}</p>
+
+        <form class="form-signin" (ngSubmit)="onLoginEmail()">
             <span id="reauth-email" class="reauth-email"></span>
             
-            <input type="email" id="inputEmail" class="form-control" (ngModel)="email" placeholder="Потребителско име или поща" required autofocus>
+            <input type="email" id="email" name="email" class="form-control" [(ngModel)]="email" placeholder="Потребителско име или поща" required autofocus>
             
-            <input type="password" id="inputPassword" class="form-control" (ngModel)="password" placeholder="Парола" required>
+            <input type="password" id="password" name="password" class="form-control" [(ngModel)]="password" placeholder="Парола" required>
             
-            <button  class="btn" [disabled]="!formData.valid" type="button">Влез</button>
+            <button  class="btn"  type="submit">Влез</button>
 
             <button class="btn" routerLink="/signup" type="button">Регистрация</button>
         </form><!-- /form -->

@@ -20,9 +20,25 @@ export class SignupComponent implements OnInit {
     public authService: AuthService,
     private router: Router) { }
   
+  
   onSignUp(): void {
-    console.log(this.email);
-   }
+    if (this.validateForm(this.email, this.password)) {
+      this.authService.signUpWithEmail(this.email, this.password)
+        .then(() => {
+          this.router.navigate(['/'])
+        }).catch(_error => {
+          this.error = _error
+          this.router.navigate(['/signup'])
+        })
+        console.log(1);
+    }
+  }
+
+  checkUserInfo() {
+    if (this.authService.isUserEmailLoggedIn) {
+      this.router.navigate(['/signup'])
+    }
+  }
 
    validateForm(email: string, password: string): boolean {
 	    if (email.length === 0) {

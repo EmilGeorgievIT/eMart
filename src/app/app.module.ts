@@ -13,13 +13,15 @@ import { ProductsComponent } from './shopping/components/products/products.compo
 import { ShoppingModule } from './shopping/shopping.module';
 import { ContactsComponent } from './core/components/contacts/contacts.component';
 import { AllproductsComponent } from './shopping/components/allproducts/allproducts.component';
+import { SignupComponent } from './core/components/signup/signup.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactsComponent,
-    AllproductsComponent
+    AllproductsComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +34,7 @@ import { AllproductsComponent } from './shopping/components/allproducts/allprodu
       { path: '', component: ProductsComponent },
       { path: 'allproduct', component: AllproductsComponent },
       { path: 'login', component: LoginComponent },
+      { path: 'signup', component: SignupComponent },
       { path: 'contacts', component: ContactsComponent }
     ])    
   ],

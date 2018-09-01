@@ -11,7 +11,7 @@ import * as firebase from 'firebase';
 @Injectable()
 export class AuthService {
   user$: Observable<firebase.User>;
-
+  authState: any = null;
   constructor(
     private userService: UserService,
     private afAuth: AngularFireAuth, 
@@ -29,6 +29,17 @@ export class AuthService {
 
   logout() { 
     this.afAuth.auth.signOut();
+  }
+
+  signUpWithEmail(email: string, password: string) {
+    return this.afAuth.auth.createUserWithEmailAndPassword(email, password)
+      .then((user) => {
+        this.authState = user
+      })
+      .catch(error => {
+        console.log(error)
+        throw error
+      });
   }
 
   get appUser$() : Observable<AppUser> {

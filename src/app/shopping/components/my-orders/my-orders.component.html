@@ -3,18 +3,22 @@
   <table class="table">
     <thead>
       <tr>
-        <th>Потребител</th>
+        <th>Име</th>
+        <th>Град</th>
+        <th>Адрес</th>
         <th>Дата</th>
-        <th></th>
+        <th>Продукт</th>
+        <th>Цена</th>
       </tr>
     </thead> 
     <tbody>
       <tr *ngFor="let order of orders$ | async">
         <td>{{ order.shipping.name }}</td>
+        <td>{{ order.shipping.city }} </td>
+        <td>{{ order.shipping.addressLine1 }} </td>
         <td>{{ order.datePlaced | date}}</td>
-        <td>
-          <a href="#">Преглед</a>
-        </td>
+        <td>{{ order.items[0].product.title}}</td>
+        <td>{{ order.items[0].totalPrice}}</td>
       </tr>
     </tbody> 
 </table>  

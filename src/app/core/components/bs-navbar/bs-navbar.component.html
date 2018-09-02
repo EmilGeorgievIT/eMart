@@ -41,7 +41,13 @@
         </ng-template>
         <li *ngIf="appUser; else anonymousUser" class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            {{ appUser.name }}
+             <ng-container *ngIf="appUser.name; else elseState">
+              {{ appUser.name }}
+            </ng-container>
+            
+            <ng-template #elseState>
+              {{ auth.currentUserName }}
+            </ng-template>
           </a>
           <div class="dropdown-menu" aria-labelledby="dropdown01">
             <a class="dropdown-item" routerLink="/my/orders">Мойте поръчки</a>

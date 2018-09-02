@@ -16,7 +16,11 @@ export class AuthService {
     private userService: UserService,
     private afAuth: AngularFireAuth, 
     private route: ActivatedRoute) { 
-    this.user$ = afAuth.authState;    
+    this.user$ = afAuth.authState;
+
+     this.afAuth.authState.subscribe((auth) => {
+      this.authState = auth
+    });    
   }
 
   login() {
@@ -84,9 +88,4 @@ export class AuthService {
         throw error
       });
   }
-
-  // signOut(): void {
-  //   this.afAuth.auth.signOut();
-  //   this.router.navigate(['/'])
-  // }
 }

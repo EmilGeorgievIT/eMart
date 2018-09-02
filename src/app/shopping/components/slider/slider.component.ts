@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+declare var jQuery: any;
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',

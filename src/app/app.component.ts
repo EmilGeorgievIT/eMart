@@ -8,8 +8,13 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
-  constructor(private userService: UserService, private auth: AuthService, router: Router) {
+  constructor(
+      private userService: UserService,
+      private auth: AuthService,
+      router: Router
+    ) {
     auth.user$.subscribe(user => {
       if (!user) return; 
 

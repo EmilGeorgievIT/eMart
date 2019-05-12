@@ -10,7 +10,7 @@ This project demonstrates a simple e-commerce application for an imaginary eMart
 
 Home
 
-![HOME](./screenshot/homepage.png)
+![HOME](./screenshots/homepage.png)
 
 
 ## Important 

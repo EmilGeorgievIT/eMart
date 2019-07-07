@@ -14,13 +14,13 @@
         <form class="form-signin" (ngSubmit)="onLoginEmail()">
             <span id="reauth-email" class="reauth-email"></span>
             
-            <input type="email" id="email" name="email" class="form-control" [(ngModel)]="email" placeholder="Потребителско име или поща" required autofocus>
+            <input type="email" id="email" name="email" class="form-control" [(ngModel)]="email" placeholder="Username" required autofocus>
             
-            <input type="password" id="password" name="password" class="form-control" [(ngModel)]="password" placeholder="Парола" required>
+            <input type="password" id="password" name="password" class="form-control" [(ngModel)]="password" placeholder="Password" required>
             
-            <button  class="btn"  type="submit">Влез</button>
+            <button  class="btn"  type="submit">Sign In</button>
 
-            <button class="btn" routerLink="/signup" type="button">Регистрация</button>
+            <button class="btn" routerLink="/signup" type="button">Sign up</button>
         </form><!-- /form -->
     </div><!-- /card-container -->
 	
@@ -28,13 +28,13 @@
 		<li>
 			<button 
 			  (click)="login()"
-			  class="btn btn-danger">Влез с Google</button>
+			  class="btn btn-danger">Sign In with Google</button>
 		</li>
 		
 		<li>
 			<button 
 			  (click)="login()"
-			  class="btn btn-primary">Влез с Facebook</button>
+			  class="btn btn-primary">Sign In with Facebook</button>
 		</li>
 	</ul><!-- /.list-buttons -->
 </div><!-- /container -->

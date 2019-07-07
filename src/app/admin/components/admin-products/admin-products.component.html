@@ -1,13 +1,13 @@
 <div class="container">
   <p>
-    <a routerLink="/admin/products/new" class="btn btn-primary">Нов Продукт</a>
+    <a routerLink="/admin/products/new" class="btn btn-primary">New product</a>
   </p>
 
   <p>
     <input 
       #query
       (keyup)="filter(query.value)"
-      type="text" class="form-control" placeholder="Търсене...">
+      type="text" class="form-control" placeholder="Search...">
   </p>
 
   <data-table
@@ -29,7 +29,7 @@
       [resizable]="true"
     >
       <ng-template #dataTableCell let-item="item">
-        {{ item.price}}лв
+        {{ item.price}}$
       </ng-template>
     </data-table-column>
 
@@ -37,7 +37,7 @@
       [property]="'$key'"  
     >
       <ng-template #dataTableCell let-item="item">
-        <a [routerLink]="['/admin/products/', item.$key]">Редактиране</a>
+        <a [routerLink]="['/admin/products/', item.$key]">Edit</a>
       </ng-template>
     </data-table-column>
 

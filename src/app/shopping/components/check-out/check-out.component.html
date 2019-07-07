@@ -1,5 +1,5 @@
 <div class="container">
-	<h2>Данни за поръчката</h2>
+	<h2>Details on your order</h2>
 	<div class="row" *ngIf="cart$ | async as cart">
 	  <div class="col-6">
 	    <shipping-form [cart]="cart"></shipping-form>

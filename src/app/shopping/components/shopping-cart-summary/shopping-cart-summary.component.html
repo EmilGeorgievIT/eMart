@@ -1,19 +1,19 @@
 <div class="card">
   <div class="card-body">
-    <h4 class="card-title">Информация за поръчката</h4>
-    <p class="card-text"> Вие имате {{ cart.totalItemsCount }} продукта във вашата количка.
+    <h4 class="card-title">Information about product</h4>
+    <p class="card-text"> You have {{ cart.totalItemsCount }} products in your cart.
     </p>
     <ul class="list-group list-group-flush">
       <li *ngFor="let item of cart.items" class="list-group-item">
         {{ item.quantity }} x {{ item.title }}
         <div class="float-right">
-          {{ item.totalPrice}}лв
+          {{ item.totalPrice}}$
         </div>
       </li>
       <li class="list-group-item font-weight-bold">
-        Общо 
+        Total 
         <div class="float-right">
-          {{ cart.totalPrice }}лв
+          {{ cart.totalPrice }}$
         </div>
       </li>
     </ul>
